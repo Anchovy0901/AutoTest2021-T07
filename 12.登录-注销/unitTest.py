@@ -7,10 +7,10 @@ import HTMLTestReport
 import tool
 
 class unitTest(unittest.TestCase):
-    # 登录失败-账号不存在
+    # 登录-账号不存在
     def test1(self):
-        '''登录失败-账号不存在测试'''
-        print("========【case_0001】登录失败-账号不存在测试 =============")
+        '''登录-账号不存在测试'''
+        print("========【AT2021-T07-12-1】登录-账号不存在测试 =============")
         b = tool.login("1885774837", "xr952343147")
         tool.wait(2)
         addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
@@ -21,10 +21,10 @@ class unitTest(unittest.TestCase):
         self.assertEqual('账号不存在!', addUnitMsg)
         tool.close(b)
 
-    # 登录失败-密码错误
+    # 登录-密码错误
     def test2(self):
-        '''登录失败-密码错误测试'''
-        print("========【case_0002】登录失败-密码错误测试 =============")
+        '''登录-密码错误测试'''
+        print("========【AT2021-T07-12-2】登录-密码错误测试 =============")
         b = tool.login("18857748370", "xr")
         tool.wait(2)
         addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
@@ -35,10 +35,10 @@ class unitTest(unittest.TestCase):
         self.assertEqual('账号或密码不正确!', addUnitMsg)
         tool.close(b)
 
-    # 登录成功-注销
+    # 登录-注销
     def test3(self):
-        '''登录成功-注销测试'''
-        print("========【case_0003】登录成功-注销测试 =============")
+        '''登录-注销测试'''
+        print("========【AT2021-T07-12-3】登录-注销测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(2)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -57,7 +57,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-设置平台模板
     def test4(self):
         '''首页配置-设置平台模板测试'''
-        print("========【case_0004】首页配置-设置平台模板测试 =============")
+        print("========【AT2021-T07-10-1】首页配置-设置平台模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -78,7 +78,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-搜索存在模板
     def test5(self):
         '''首页配置-搜索存在模板试'''
-        print("========【case_0005】首页配置-搜索存在模板测试 =============")
+        print("========【AT2021-T07-10-2】首页配置-搜索存在模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -97,7 +97,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-搜索不存在模板
     def test6(self):
         '''首页配置-搜索不存在模板测试'''
-        print("========【case_0006】首页配置-搜索不存在模板测试 =============")
+        print("========【AT2021-T07-10-3】首页配置-搜索不存在模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -116,7 +116,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-自定义模板
     def test7(self):
         '''首页配置-自定义模板测试'''
-        print("========【case_0007】首页配置-自定义模板测试 =============")
+        print("========【AT2021-T07-10-4】首页配置-自定义模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -152,7 +152,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-设置自定义模板
     def test8(self):
         '''首页配置-设置自定义模板测试'''
-        print("========【case_0008】首页配置-设置自定义模板测试 =============")
+        print("========【AT2021-T07-10-5】首页配置-设置自定义模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -170,59 +170,30 @@ class unitTest(unittest.TestCase):
         b.save_screenshot(pic_path)  # 截图，获取测试结果
         tool.close(b)
 
-    # 编辑单位信息-区划名称（待补）
+    # 首页配置-删除自定义模板
     def test9(self):
-        '''新增土地啥都不写测试'''
-        print("========【case_0001】新增土地啥都不写测试 =============")
-        b = tool.login("13588631227", "Toby0901")
-        tool.joinItem(b, "单位管理", "单位信息")
-        # b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/div/div/div[1]/div[1]/form/div/div/div/div/div/div/button/i').click()
-        # b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[2]/div/div[2]/div/div/div/input').send_keys(value)
-        # b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/button').click()
-        # 点击编辑单位信息
-        b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/button').click()
-
-        #相当于setObject（）
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[6]/div/div[2]/div/div/div/div/input').send_keys("辽宁省")
+        '''首页配置-删除自定义模板测试'''
+        print("========【AT2021-T07-10-6】首页配置-删除自定义模板测试 =============")
+        b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
-        b.find_element_by_xpath("//div[@x-placement='bottom-start']/div[1]/div[1]/ul/li/div/span[text()='" + value + "']").click()
-        tool.wait(1)
-
-        b.find_element(By.XPATH, '//button/span[text()="完成"]').click()
+        b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
         tool.wait(2)
+        elements = b.find_elements_by_class_name("el-dropdown-menu__item")
+        elements[2].click()
+        tool.wait(2)
+        b.find_element(By.XPATH, '//div[@class="tree defaultClick"]/div[1]/div[2]').click()
+        tool.wait(2)
+        b.find_element(By.XPATH, '/html/body/div[2]/div/div[3]/button[2]/span').click()
+        tool.wait(1)
+        addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
         current_time = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
         pic_path = '.\\unittest\\' + current_time + '.png'  # 设置存储图片路径，测试结果图片可以按照每天进行区分
         print(pic_path)
         b.save_screenshot(pic_path)  # 截图，获取测试结果
-
+        self.assertEqual('删除成功', addUnitMsg)
         tool.close(b)
 
-    # 编辑单位信息-单位地址（待补）
-    def test9(self):
-        '''新增土地啥都不写测试'''
-        print("========【case_0001】新增土地啥都不写测试 =============")
-        b = tool.login("13588631227", "Toby0901")
-        tool.joinItem(b, "单位管理", "单位信息")
-        # b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/div/div/div[1]/div[1]/form/div/div/div/div/div/div/button/i').click()
-        # b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[2]/div/div[2]/div/div/div/input').send_keys(value)
-        # b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/button').click()
-        # 点击编辑单位信息
-        b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/button').click()
 
-        #相当于setObject（）
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div[2]/div[1]/form/div[6]/div/div[2]/div/div/div/div/input').send_keys("辽宁省")
-        tool.wait(1)
-        b.find_element_by_xpath("//div[@x-placement='bottom-start']/div[1]/div[1]/ul/li/div/span[text()='" + value + "']").click()
-        tool.wait(1)
-
-        b.find_element(By.XPATH, '//button/span[text()="完成"]').click()
-        tool.wait(2)
-        current_time = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
-        pic_path = '.\\unittest\\' + current_time + '.png'  # 设置存储图片路径，测试结果图片可以按照每天进行区分
-        print(pic_path)
-        b.save_screenshot(pic_path)  # 截图，获取测试结果
-
-        tool.close(b)
 
     # 创建集团-集团名称未填
     def test10(self):

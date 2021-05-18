@@ -7,10 +7,10 @@ import HTMLTestReport
 import tool
 
 class unitTest(unittest.TestCase):
-    # 登录失败-账号不存在
+    # 登录-账号不存在
     def test1(self):
-        '''登录失败-账号不存在测试'''
-        print("========【case_0001】登录失败-账号不存在测试 =============")
+        '''登录-账号不存在测试'''
+        print("========【AT2021-T07-12-1】登录-账号不存在测试 =============")
         b = tool.login("1885774837", "xr952343147")
         tool.wait(2)
         addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
@@ -21,10 +21,10 @@ class unitTest(unittest.TestCase):
         self.assertEqual('账号不存在!', addUnitMsg)
         tool.close(b)
 
-    # 登录失败-密码错误
+    # 登录-密码错误
     def test2(self):
-        '''登录失败-密码错误测试'''
-        print("========【case_0002】登录失败-密码错误测试 =============")
+        '''登录-密码错误测试'''
+        print("========【AT2021-T07-12-2】登录-密码错误测试 =============")
         b = tool.login("18857748370", "xr")
         tool.wait(2)
         addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
@@ -35,10 +35,10 @@ class unitTest(unittest.TestCase):
         self.assertEqual('账号或密码不正确!', addUnitMsg)
         tool.close(b)
 
-    # 登录成功-注销
+    # 登录-注销
     def test3(self):
-        '''登录成功-注销测试'''
-        print("========【case_0003】登录成功-注销测试 =============")
+        '''登录-注销测试'''
+        print("========【AT2021-T07-12-3】登录-注销测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(2)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -57,7 +57,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-设置平台模板
     def test4(self):
         '''首页配置-设置平台模板测试'''
-        print("========【case_0004】首页配置-设置平台模板测试 =============")
+        print("========【AT2021-T07-10-1】首页配置-设置平台模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -78,7 +78,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-搜索存在模板
     def test5(self):
         '''首页配置-搜索存在模板试'''
-        print("========【case_0005】首页配置-搜索存在模板测试 =============")
+        print("========【AT2021-T07-10-2】首页配置-搜索存在模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -97,7 +97,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-搜索不存在模板
     def test6(self):
         '''首页配置-搜索不存在模板测试'''
-        print("========【case_0006】首页配置-搜索不存在模板测试 =============")
+        print("========【AT2021-T07-10-3】首页配置-搜索不存在模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -116,7 +116,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-自定义模板
     def test7(self):
         '''首页配置-自定义模板测试'''
-        print("========【case_0007】首页配置-自定义模板测试 =============")
+        print("========【AT2021-T07-10-4】首页配置-自定义模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -152,7 +152,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-设置自定义模板
     def test8(self):
         '''首页配置-设置自定义模板测试'''
-        print("========【case_0008】首页配置-设置自定义模板测试 =============")
+        print("========【AT2021-T07-10-5】首页配置-设置自定义模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
@@ -173,7 +173,7 @@ class unitTest(unittest.TestCase):
     # 首页配置-删除自定义模板
     def test9(self):
         '''首页配置-删除自定义模板测试'''
-        print("========【case_0009】首页配置-删除自定义模板测试 =============")
+        print("========【AT2021-T07-10-6】首页配置-删除自定义模板测试 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.wait(1)
         b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()

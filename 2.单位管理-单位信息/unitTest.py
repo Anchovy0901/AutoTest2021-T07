@@ -227,9 +227,9 @@ class unitTest(unittest.TestCase):
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
 
         #相当于setText()
-        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃屎")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃屎集团")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎必拉稀")
+        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃饭")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃饭集团")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭必拉稀")
         tool.wait(1)
 
         tool.wait(1)
@@ -250,9 +250,9 @@ class unitTest(unittest.TestCase):
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
 
         #相当于setText()
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃屎")
-        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃屎集团")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎必拉稀")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃饭")
+        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃饭集团")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭必拉稀")
         tool.wait(1)
 
         tool.wait(1)
@@ -274,9 +274,9 @@ class unitTest(unittest.TestCase):
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
 
         #相当于setText()
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃屎")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃屎集团")
-        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎必拉稀")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃饭")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃饭集团")
+        # b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭必拉稀")
         tool.wait(1)
 
         tool.wait(1)
@@ -293,13 +293,14 @@ class unitTest(unittest.TestCase):
         print("========【case_0014】创建集团-创建成功 =============")
         b = tool.login("18857748370", "xr952343147")
         tool.joinItem(b, "单位管理", "单位信息")
+        tool.wait(1)
         # 点击创建集团
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
-
+        tool.wait(1)
         #相当于setText()
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃屎")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃屎集团")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎必拉稀")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃饭")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃饭集团")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭必拉稀")
         tool.wait(1)
 
         b.find_element(By.XPATH, '//button/span[text()="确 定"]').click()
@@ -311,13 +312,15 @@ class unitTest(unittest.TestCase):
         '''创建集团-集团名称重复'''
         print("========【case_0015】创建集团-集团名称重复=============")
         b = tool.login("18857748370", "xr952343147")
+        tool.joinItem(b, "单位管理", "单位信息")
+        tool.wait(1)
         # 点击创建集团
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
-
+        tool.wait(1)
         #相当于setText()
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃屎")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃屎gogogo")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎未必拉稀")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任要吃饭")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("吃饭gogogo")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭未必拉稀")
 
         tool.wait(1)
 
@@ -337,9 +340,9 @@ class unitTest(unittest.TestCase):
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="创建集团"]').click()
 
         #相当于setText()
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任不要吃屎")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("不吃屎集团")
-        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃屎必拉稀")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[1]/div/div/input').send_keys("我dio任不要吃饭")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[2]/div/div/input').send_keys("不吃饭集团")
+        b.find_element_by_xpath('//*[@role="dialog"]/div[2]/div[1]/form/div[3]/div/div/input').send_keys("吃饭必拉稀")
 
         tool.wait(1)
 
@@ -359,9 +362,9 @@ class unitTest(unittest.TestCase):
         b.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[1]/div[2]/div/button/span[text()="加入集团"]').click()
 
         #相当于setText()
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div[2]/div/form/div/div/div/div/input').send_keys("我dio任要吃屎")
+        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div[2]/div/form/div/div/div/div/input').send_keys("我dio任要吃饭")
         tool.wait(1)
-        b.find_element_by_xpath("//div[@x-placement='bottom-start']/div[1]/div[1]/ul/li/span[text()='我dio任要吃屎']").click()
+        b.find_element_by_xpath("//div[@x-placement='bottom-start']/div[1]/div[1]/ul/li/span[text()='我dio任要吃饭']").click()
         tool.wait(1)
         b.find_element(By.XPATH, '//button/span[text()="确定"]').click()
         tool.wait(2)
@@ -380,6 +383,50 @@ class unitTest(unittest.TestCase):
         tool.wait(2)
         tool.close(b)
 
+    # 查看单位信息-查看更多
+    def test19(self):
+        '''查看单位信息-查看更多'''
+        print("========【case_0019】查看单位信息-查看更多 =============")
+        b = tool.login("18857748370", "xr952343147")
+        tool.joinItem(b, "单位管理", "单位信息")
+        # 点击查看更多
+        b.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/button/span[text()="编辑单位信息"]').click()
+        tool.wait(2)
+        tool.close(b)
+
+    # 解散集团
+    def test20(self):
+        '''解散集团'''
+        print("========【case_0020】解散集团 =============")
+        b = tool.login("18857748370", "xr952343147")
+        tool.joinItem(b, "单位管理", "单位信息")
+        # 点击查看更多
+        b.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div[3]/div/div/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span/div/div/img').click()
+        b.find_element(By.XPATH,'//*[@x-placement="bottom"]/div[1]').click()
+        tool.wait(1)
+        b.find_element(By.XPATH, '//*[@class="el-button el-button--default el-button--small el-button--primary "]/span').click()
+
+        tool.wait(2)
+        tool.close(b)
+
+    # 解散单位
+    def test21(self):
+        '''解散单位'''
+        print("========【case_0021】解散单位 =============")
+        b = tool.login("18857748370", "xr952343147")
+        # 点击查看更多
+        b.find_element_by_xpath('//*[@id="app"]/div/div[1]/div/div[2]/div[4]/div/div/i').click()
+        tool.wait(1)
+        elements = b.find_elements_by_class_name("el-dropdown-menu__item")
+        elements[0].click()
+        tool.wait(1)
+        b.find_element(By.XPATH,'//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div[3]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[10]/div/div/span/div/div/img').click()
+        b.find_element(By.XPATH, '//*[@x-placement="bottom"]/div[2]').click()
+        tool.wait(1)
+        b.find_element(By.XPATH,'//*[@class="el-button el-button--default el-button--small el-button--primary "]/span').click()
+
+        tool.wait(2)
+        tool.close(b)
 
 
 

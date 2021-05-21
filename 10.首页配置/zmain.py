@@ -18,7 +18,7 @@ if __name__ == "__main__":
     testunit.addTest(unitTest.unitTest("test7"))
     testunit.addTest(unitTest.unitTest("test8"))
     testunit.addTest(unitTest.unitTest("test9"))
-    # testunit.addTest(landTest.landTest("test10"))
+    testunit.addTest(unitTest.unitTest("test10"))
     # testunit.addTest(landTest.landTest("test11"))
     # testunit.addTest(landTest.landTest("test12"))
     # testunit.addTest(landTest.landTest("test13"))

@@ -7,7 +7,6 @@ import tool
 
 class unitTest(unittest.TestCase):
     def test1(self):
-        '''单位管理-应用中心'''
         print("========【AT2021-T07-5-01】应用市场-获取应用 =============")
         b = tool.login("17306422238", "YANGyuanJIE#3")
         b.find_element(By.XPATH, '//span[@title="单位管理"]').click()

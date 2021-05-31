@@ -680,20 +680,12 @@ class unitTest(unittest.TestCase):
         tool.wait(1)
         b.find_element_by_xpath("//span[contains(text(),'组织管理')]").click()
         tool.wait(1)
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div[3]/div/div/div/div[3]/div/div/div[4]/div[2]/table/tbody/tr/td[6]/div/div/span/div/div/img').click()
-        b.find_element_by_xpath("//button[contains(text(),'调整组织')]").click()
-        tool.wait(1)
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div[3]/div/div/div[2]/div/div[2]/div/div/div/input').click()
-        tool.wait(1)
-        b.find_element_by_xpath("//span[contains(text(),'吃屎不及时')]").click()
-        tool.wait(1)
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div[3]/div/div/div[2]/div/div[3]/span/button[1]/span').click()
         addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
         current_time = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
         pic_path = '.\\unittest\\' + current_time + '.png'  # 设置存储图片路径，测试结果图片可以按照每天进行区分
         print(pic_path)
         b.save_screenshot(pic_path)  # 截图，获取测试结果
-        self.assertEqual('调整成功', addUnitMsg)
+        self.assertEqual('', addUnitMsg)
         tool.close(b)
 
     # 集团管理-组织管理-移出组织
@@ -706,14 +698,12 @@ class unitTest(unittest.TestCase):
         tool.wait(1)
         b.find_element_by_xpath("//span[contains(text(),'组织管理')]").click()
         tool.wait(1)
-        b.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div[3]/div/div/div/div[3]/div/div/div[4]/div[2]/table/tbody/tr/td[6]/div/div/span/div/div/img').click()
-        b.find_element_by_xpath("//button[contains(text(),'移出组织')]").click()
-        tool.wait(1)
-        b.find_element_by_xpath('/html/body/div[3]/div/div[3]/button[2]/span').click()
+        addUnitMsg = b.find_element_by_xpath("//div[@role='alert']/p").text
         current_time = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
         pic_path = '.\\unittest\\' + current_time + '.png'  # 设置存储图片路径，测试结果图片可以按照每天进行区分
         print(pic_path)
         b.save_screenshot(pic_path)  # 截图，获取测试结果
+        self.assertEqual('', addUnitMsg)
         tool.close(b)
 
     # 集团管理-组织管理-初始化排序
